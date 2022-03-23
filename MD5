@@ -1,0 +1,15 @@
+12fc1500766d15f56a1bf3a9af515e65 *DESCRIPTION
+8b517d13e2a5e6088952c96ca707c853 *NAMESPACE
+9f8300df1baf2940a726b0f46d33d0e9 *R/dataZIB.R
+3f4d48fec2b3d2684480e24ef05c1748 *R/dataZIB.ns.R
+6d995942dfbe47155f645a30795bf014 *R/ziBinomial.R
+8d37d86f85629eb32e4939020bd69ad1 *build/vignette.rds
+86b1041beaee7a330b5cb34dfc3ed8eb *data/dataZIB.ns.rda
+a2e2ae8bdca7688d13422ca46d7f64e7 *data/dataZIB.rda
+71f015954d75bc232723cf0e31a4df5e *inst/doc/Helpfile.R
+e6a4fbb6118e5a5003a3557a7f4b74d8 *inst/doc/Helpfile.Rmd
+b3755b222cea6ce749c75bf19b1dd468 *inst/doc/Helpfile.html
+dee85c21fa2fd5b069f569cac0a57ab7 *man/dataZIB.Rd
+ced83eeebf14dd30856cd630729b0751 *man/dataZIB.ns.Rd
+b35de165dc55ebd958291c397b846c9f *man/ziBinomial.Rd
+e6a4fbb6118e5a5003a3557a7f4b74d8 *vignettes/Helpfile.Rmd
