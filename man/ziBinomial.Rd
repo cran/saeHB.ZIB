@@ -16,7 +16,6 @@ ziBinomial(
   thin = 2,
   burn.in = 2000,
   tau.u.nZ = 1,
-  tau.u.Z = 1,
   data
 )
 }
@@ -43,8 +42,6 @@ ziBinomial(
 
 \item{tau.u.nZ}{Variance of random effect area for non-zero of variable interest \eqn{(y)} with default \code{1}}
 
-\item{tau.u.Z}{Variance of random effect area for zero of variable interest \eqn{(y)} with default \code{1}}
-
 \item{data}{The data frame}
 }
 \value{
@@ -56,27 +53,27 @@ This function returns a list of the following objects:
  \item{plot_beta}{Trace, Density, Autocorrelation Function Plot of MCMC samples}
 }
 \description{
-This function is implemented to variable of interest \eqn{(y)} that assumed to be a Zero Inflated Binomial Distribution. The range of data is \eqn{(0 < y < \infty)}. This model can be used to handle overdispersion and excess zero in data.
+This function is implemented to variable of interest \eqn{(y)} that assumed to be a Zero Inflated Binomial Distribution. The range of data is \eqn{(0 < y < \infty)}. This model can be used to handle overdispersion caused by excess zero in data.
 }
 \examples{
 #Compute Fitted Model
- y ~ x1 +x2
+ y ~ X1 +X2
 
 # For data without any nonsampled area
 # Load Dataset
   data(dataZIB)
-  saeHB.ZIB <- ziBinomial(formula = y~x1+x2, iter.update=3, iter.mcmc = 1000,
+  saeHB.ZIB <- ziBinomial(formula = y~X1+X2, "s", iter.update=3, iter.mcmc = 1000,
                 burn.in = 200,data = dataZIB)
 #the setting of iter.update, iter.mcmc, and burn.in in this example
 #is considered to make the example execution time be faster.
 #Result
-saeHB.ZIB$Est                                   #Small Area mean Estimates
-saeHB.ZIB$sd                                    #Standard deviation of Small Area Mean Estimates
-saeHB.ZIB$refVar                                #refVar
-saeHB.ZIB$coefficient                           #coefficient
+saeHB.ZIB$Est                                    #Small Area mean Estimates
+saeHB.ZIB$Est$SD                                 #Standard deviation of Small Area Mean Estimates
+saeHB.ZIB$refVar                                 #refVar
+saeHB.ZIB$coefficient                            #coefficient
 #Load Library 'coda' to execute the plot
-#autocorr.plot(saeHB.ZIB$plot[[3]]) is used to  #ACF Plot for alpha
-#autocorr.plot(saeHB.ZIB$plot[[3]]) is used to  #ACF Plot for alpha
-#plot(saeHB.ZIB$plot_alpha[[3]]) is used to     #Dencity and trace plot for alpha
-#plot(saeHB.ZIB$plot_beta[[3]]) is used to      #Dencity and trace plot for beta
+#autocorr.plot(saeHB.ZIB$plot_alpha[[3]]) is used to   #ACF Plot for alpha
+#autocorr.plot(saeHB.ZIB$plot_beta[[3]]) is used to    #ACF Plot for beta
+#plot(saeHB.ZIB$plot_alpha[[3]]) is used to            #Dencity and trace plot for alpha
+#plot(saeHB.ZIB$plot_beta[[3]]) is used to             #Dencity and trace plot for beta
 }

@@ -1,11 +1,18 @@
 ---
-title: "saeHB.ZIB"
+title: "saeHB_ZIB"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Helpfile}
+  %\VignetteIndexEntry{saeHB_ZIB}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
 
 ```{r setup}
 library(saeHB.ZIB)
